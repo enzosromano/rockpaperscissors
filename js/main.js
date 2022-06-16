@@ -43,13 +43,14 @@ function game() {
                 break;
         }
     }
+
+    if(playerWins > computerwins){
+        console.log("Congratulations, you won.")
+    }
+    else {
+        console.log("Sorry... you lost.");
+    }
+
 }
 
-let output = computerPlay();
-let input = Math.floor(Math.random() * 3);
-console.log("0:R   1:P   2:S")
-console.log("You chose: " + input);
-console.log("Computer Chose: " + output);
-console.log(determineWinner(input, output));
-game();
   
