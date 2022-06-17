@@ -1,7 +1,6 @@
 var playerWins = 0;
 var computerwins = 0;
 
-
 function computerPlay(){
 
     return(Math.floor(Math.random() * 3)); 
@@ -9,6 +8,9 @@ function computerPlay(){
 }
 
 function determineWinner(playerSelection, computerSelection){
+
+    console.log(playerSelection);
+    console.log(computerSelection);
 
     if(((playerSelection + 1) % 3) == computerSelection) {
         /* Computer Won */
@@ -30,20 +32,20 @@ function game(userInput) {
 
         switch(winner) {
             case 0:
-                console.log("Its a tie")
-                return("tie");
+                document.getElementById('gameResult').innerText = "It's a tie."
                 break;
             case 1:
                 computerwins++;
-                console.log("Computer Won. Computer has " + computerwins + " wins.");
-                return("tie");
+                document.getElementById('gameResult').innerText = "The computer wins."
                 break;
             case 2:
                 playerWins++;
-                console.log("You Won. You have " + playerWins + " wins.");
-                return("tie");
+                document.getElementById('gameResult').innerText = "You won!!"
                 break;
         }
+
+    document.getElementById('scoreboard').innerText = 
+        ("You: " + playerWins + " | Computer: " + computerwins)
 
     if(isOver()){
 
