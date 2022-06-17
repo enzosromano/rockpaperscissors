@@ -47,18 +47,21 @@ body {
 .mainbody {
     display: flex;
     flex-direction: column;
+
+    background-color: #7395AE;
+    padding-top: 20px;
 }
 
 /* */
 
 .userSelection {
-    background-color: #B1A296;
+    background-color: #7395AE;
     height: auto;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 button {
@@ -73,7 +76,7 @@ button {
 }
 
 .outputArea {
-    background-color: #B1A296;
+    background-color: #7395AE;
     display: flex;
     flex-direction: column;
     justify-content: center;
