@@ -32,25 +32,25 @@ function game(userInput) {
 
         switch(winner) {
             case 0:
-                document.getElementById('gameResult').innerText = "It's a tie."
+                document.getElementById('gameResult').innerText = "It's a tie.";
                 break;
             case 1:
                 computerwins++;
-                document.getElementById('gameResult').innerText = "The computer wins."
+                document.getElementById('gameResult').innerText = "The computer wins.";
                 break;
             case 2:
                 playerWins++;
-                document.getElementById('gameResult').innerText = "You won!!"
+                document.getElementById('gameResult').innerText = "You won!!";
                 break;
         }
 
     document.getElementById('scoreboard').innerText = 
-        ("You: " + playerWins + " | Computer: " + computerwins)
+        ("You: " + playerWins + " | Computer: " + computerwins);
 
     if(isOver()){
 
         if(playerWins > computerwins){
-            console.log("Congratulations, you won.")
+            console.log("Congratulations, you won.");
         }
         else {
             console.log("Sorry... you lost.");
