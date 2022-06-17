@@ -1,3 +1,7 @@
+var playerWins = 0;
+var computerwins = 0;
+
+
 function computerPlay(){
 
     return(Math.floor(Math.random() * 3)); 
@@ -20,14 +24,9 @@ function determineWinner(playerSelection, computerSelection){
     }
 }
 
-function game() {
+function game(userInput) {
 
-    let playerWins = 0;
-    let computerwins = 0
-
-    while((playerWins < 5) && (computerwins < 5)){
-
-        let winner = determineWinner(0, computerPlay());
+    let winner = determineWinner(userInput, computerPlay());
 
         switch(winner) {
             case 0:
@@ -42,15 +41,27 @@ function game() {
                 console.log("You Won. You have " + playerWins + " wins.");
                 break;
         }
+
+    if(isOver()){
+
+        if(playerWins > computerwins){
+            console.log("Congratulations, you won.")
+        }
+        else {
+            console.log("Sorry... you lost.");
+        }
+        
     }
 
-    if(playerWins > computerwins){
-        console.log("Congratulations, you won.")
+}
+
+function isOver(){
+    if((playerWins == 5) || (computerwins == 5)){
+        return(true);
     }
     else {
-        console.log("Sorry... you lost.");
+        return(false);
     }
-
 }
 
   
