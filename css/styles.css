@@ -55,8 +55,7 @@ body {
 /* */
 
 .userSelection {
-    /*background-color: #7395AE;*/
-    background-color: pink;
+    background-color: #7395AE;
     height: auto;
 
     display: flex;
