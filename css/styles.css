@@ -72,6 +72,13 @@ button {
     align-items: center;
 }
 
+.outputArea {
+    background-color: #B1A296;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Footer */
 .footer {

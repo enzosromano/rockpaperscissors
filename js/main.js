@@ -31,14 +31,17 @@ function game(userInput) {
         switch(winner) {
             case 0:
                 console.log("Its a tie")
+                return("tie");
                 break;
             case 1:
                 computerwins++;
                 console.log("Computer Won. Computer has " + computerwins + " wins.");
+                return("tie");
                 break;
             case 2:
                 playerWins++;
                 console.log("You Won. You have " + playerWins + " wins.");
+                return("tie");
                 break;
         }
 
@@ -50,7 +53,7 @@ function game(userInput) {
         else {
             console.log("Sorry... you lost.");
         }
-        
+
     }
 
 }
