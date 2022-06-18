@@ -12,6 +12,18 @@ function determineWinner(playerSelection, computerSelection){
     console.log(playerSelection);
     console.log(computerSelection);
 
+    switch(computerSelection) {
+        case 0:
+            document.getElementById('compRock').style.backgroundColor = "black";
+            break;
+        case 1:
+            document.getElementById('compPaper').style.backgroundColor = "black";
+            break;
+        case 2:
+            document.getElementById('compScissors').style.backgroundColor = "black";
+            break;
+    }
+
     if(((playerSelection + 1) % 3) == computerSelection) {
         /* Computer Won */
         return(1);
