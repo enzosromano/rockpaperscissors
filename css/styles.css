@@ -84,14 +84,19 @@ body {
     text-align: center;
 }
 
-.userSelection {
+.selectionInterface {
     background-color: #1A1A1D;
     height: auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 10%;
+}
+
+.userSide, .computerSide {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -118,6 +123,9 @@ button {
 
     color: var(--primary-light);
     font-size: 40px;
+
+    border: 12px solid var(--primary-red);
+    margin: 10px;
     
 }
 
@@ -126,9 +134,14 @@ button {
         font-size: 18px;
     }
 
-    .userSelection {
+    .userSide {
         display: flex;
         flex-direction: column;
+    }
+
+    .button {
+        width: 25vw;
+        height: 18vw;
     }
 
   }

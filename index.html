@@ -24,21 +24,33 @@
 
     <div class="mainbody">
 
-        <div class="infoArea">
-            <p>First to 5 wins.</p>
-        </div>
-
-        <div class="userSelection">
-            <button onclick="game(0)">Rock</button>
-            <button onclick="game(1)">Paper</button>
-            <button onclick="game(2)">Scissors</button>
-        </div>
-
         <div class="outputArea">
-            <p id="gameResult">Make a selection.</p>
+            
             <p>Scoreboard:</p>
             <p id="scoreboard">You: 0 | Computer: 0</p>
         </div>
+
+        <div class="infoArea">
+            <p id="gameResult">First to 5 wins.</p>
+        </div>
+
+        <div class="selectionInterface">
+
+            <div class="userSide">
+                <button onclick="game(0)">Rock</button>
+                <button onclick="game(1)">Paper</button>
+                <button onclick="game(2)">Scissors</button>
+            </div>
+
+            <div class="computerSide">
+                <button>Rock</button>
+                <button>Paper</button>
+                <button>Scissors</button>
+            </div>
+
+        </div>
+
+        
 
     </div>
 
