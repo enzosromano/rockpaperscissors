@@ -130,22 +130,6 @@ body {
     text-align: center;
 }
 
-.selectionInterface {
-    background-color: #1A1A1D;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-}
-
-.userSide, .computerSide {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
 button {
     font-family: 'Press Start 2P', cursive;
     background-color: var(--primary-red);
@@ -159,10 +143,6 @@ button {
 
     justify-content: center;
     align-items: center;
-}
-
-.computerSide button {
-    background-color: #5b5f68;
 }
 
 .outputArea {
@@ -181,13 +161,9 @@ button {
 }
 
 @media only screen and (max-width: 850px) {
+    
     .outputArea {
         font-size: 18px;
-    }
-
-    .userSide {
-        display: flex;
-        flex-direction: column;
     }
 
     button {
