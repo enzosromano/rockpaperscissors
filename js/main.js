@@ -1,6 +1,8 @@
 var playerWins = 0;
 var computerwins = 0;
 
+
+
 function computerPlay(){
 
     return(Math.floor(Math.random() * 3)); 
@@ -9,23 +11,7 @@ function computerPlay(){
 
 function determineWinner(playerSelection, computerSelection){
 
-    console.log(playerSelection);
-    console.log(computerSelection);
-
-    switch(computerSelection) {
-        case 0:
-            document.getElementById('compRock').style.backgroundColor = "black";
-            document.getElementById('compRock').innerText = "Rock";
-            break;
-        case 1:
-            document.getElementById('compPaper').style.backgroundColor = "black";
-            document.getElementById('compPaper').innerText = "Paper";
-            break;
-        case 2:
-            document.getElementById('compScissors').style.backgroundColor = "black";
-            document.getElementById('compScissors').innerText = "Scissors";
-            break;
-    }
+    setButtonStates(playerSelection, computerSelection);
 
     if(((playerSelection + 1) % 3) == computerSelection) {
         /* Computer Won */
@@ -41,14 +27,53 @@ function determineWinner(playerSelection, computerSelection){
     }
 }
 
+function setButtonStates(playerSelection, computerSelection) {
+
+    switch(computerSelection) {
+        case 0:
+            getElement('compRock').style.backgroundColor = "#6F2232";
+            getElement('compRock').innerText = "Rock";
+            break;
+        case 1:
+            getElement('compPaper').style.backgroundColor = "#6F2232";
+            getElement('compPaper').innerText = "Paper";
+            break;
+        case 2:
+            getElement('compScissors').style.backgroundColor = "#6F2232";
+            getElement('compScissors').innerText = "Scissors";
+            break;
+    }
+
+    switch(playerSelection) {
+        case 0:
+            getElement('userPaper').style.backgroundColor = "#5b5f68";
+            getElement('userScissors').style.backgroundColor = "#5b5f68";
+            break;
+        case 1:
+            getElement('userRock').style.backgroundColor = "#5b5f68";
+            getElement('userScissors').style.backgroundColor = "#5b5f68";
+            break;
+        case 2:
+            getElement('userRock').style.backgroundColor = "#5b5f68";
+            getElement('userPaper').style.backgroundColor = "#5b5f68";
+            break;
+    }
+
+}
+
 function returnToDefault(){
 
-    document.getElementById('compRock').style.backgroundColor = "#950740";
-    document.getElementById('compRock').innerText = "???";
-    document.getElementById('compPaper').style.backgroundColor = "#950740";
-    document.getElementById('compPaper').innerText = "???";
-    document.getElementById('compScissors').style.backgroundColor = "#950740";
-    document.getElementById('compScissors').innerText = "???";
+    getElement('compRock').style.backgroundColor = "#5b5f68";
+    getElement('compRock').innerText = "???";
+    getElement('compPaper').style.backgroundColor = "#5b5f68";
+    getElement('compPaper').innerText = "???";
+    getElement('compScissors').style.backgroundColor = "#5b5f68";
+    getElement('compScissors').innerText = "???";
+
+    getElement('userRock').style.backgroundColor = "#950740";
+    getElement('userPaper').style.backgroundColor = "#950740";
+    getElement('userScissors').style.backgroundColor = "#950740";
+
 }
 
 function game(userInput) {
@@ -63,7 +88,7 @@ function game(userInput) {
                 break;
             case 1:
                 computerwins++;
-                document.getElementById('gameResult').innerText = "The computer wins.";
+                document.getElementById('gameResult').innerText = "Computer wins.";
                 break;
             case 2:
                 playerWins++;
@@ -95,5 +120,9 @@ function isOver(){
         return(false);
     }
 }
+
+function getElement(id){
+    return document.getElementById(id);
+ }
 
   
