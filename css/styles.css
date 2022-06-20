@@ -98,6 +98,7 @@ body {
 .userSide, .computerSide {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 button {
@@ -105,8 +106,8 @@ button {
     background-color: var(--primary-red);
     color: var(--primary-light);
     font-size: larger;
-    width: 30vh;
-    height: 16vh;
+    width: 45vh;
+    height: 20vh;
 
     border-radius: 12px;
     font-size: 25px;
