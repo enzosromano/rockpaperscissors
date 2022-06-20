@@ -9,13 +9,36 @@
     --primary-red: #950740;
   }
 
+/* Body */
+
 body {
     width: 100%;
     margin: 0;
     font-family: 'Press Start 2P', cursive;
-
     display: flex;
     flex-direction: column ;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-dark);
+    padding-top: 20px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--primary-red);
+    color: var(--primary-light);
+    font-size: larger;
+    width: 45vh;
+    height: 20vh;
+
+    border-radius: 12px;
+    font-size: 25px;
+
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navbar */
@@ -66,7 +89,7 @@ body {
 
   }
 
-/* New Interface */
+/* Main Interface */
 
 .mainInterface {
     display: flex;
@@ -86,7 +109,6 @@ body {
 .userResults, .computerResults {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
@@ -111,17 +133,7 @@ body {
 
   }
 
-
-/* Main Body */
-
-.mainbody {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-dark);
-    padding-top: 20px;
-}
-
-/* */
+/* Info Area */
 
 .infoArea {
     display: flex;
@@ -129,21 +141,6 @@ body {
     color: white;
     font-size: 28px;
     text-align: center;
-}
-
-button {
-    font-family: 'Press Start 2P', cursive;
-    background-color: var(--primary-red);
-    color: var(--primary-light);
-    font-size: larger;
-    width: 45vh;
-    height: 20vh;
-
-    border-radius: 12px;
-    font-size: 25px;
-
-    justify-content: center;
-    align-items: center;
 }
 
 .outputArea {

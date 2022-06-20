@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js"></script>
-
   <title>Rock Paper Scissors</title>
 </head>
 
@@ -22,22 +21,24 @@
         
     </div>
 
-    <div class="mainbody">
+    <div class="mainContainer">
 
         <div class="outputArea">
             
             <p>Scoreboard:</p>
             <p id="scoreboard">You: 0 | Opp: 0</p>
-        </div>
 
+        </div>
 
         <div class="mainInterface">
 
             <div class="results">
+
                 <div class="userResults">
                     <p>User:</p>
                     <h1 id="userOutput">??</h1>
                 </div>
+
                 <div class="computerResults">
                     <p>Comp:</p>
                     <h1 id="computerOutput">??</h1>
@@ -49,20 +50,16 @@
                 <button id="userPaper" onclick="game(1)">Paper</button>
                 <button id="userScissors" onclick="game(2)">Scissors</button>
             </div>
-
         </div>
 
         <div class="infoArea">
             <p id="gameResult">First to 5 wins.</p>
         </div>
-
     </div>
 
-    
     <div class="footer">
         <p>Copyright © Enzo Romano 2022</p>
     </div>
     
-
 </body>
 </html>
