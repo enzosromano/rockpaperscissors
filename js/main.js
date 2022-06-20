@@ -1,17 +1,18 @@
+/* Global Variables */
 var playerWins = 0;
 var computerwins = 0;
 
-
-
+/* Returns a random number (0-2) to simulate the computers turn */
 function computerPlay(){
 
     return(Math.floor(Math.random() * 3)); 
 
 }
 
+/* Determines the winner of a single round */
 function determineWinner(playerSelection, computerSelection){
 
-    setButtonStates(playerSelection, computerSelection);
+    setOutputStates(playerSelection, computerSelection);
 
     if(((playerSelection + 1) % 3) == computerSelection) {
         /* Computer Won */
@@ -22,12 +23,13 @@ function determineWinner(playerSelection, computerSelection){
         return(0);
     }
     else {
-        /* You won */
+        /* User won */
         return(2);
     }
 }
 
-function setButtonStates(playerSelection, computerSelection) {
+/*This function displays the user and computer's choices*/
+function setOutputStates(playerSelection, computerSelection) {
 
     switch(computerSelection) {
         case 0:
@@ -61,6 +63,8 @@ function setButtonStates(playerSelection, computerSelection) {
 
 }
 
+/* After a new selection is made, this function returns the default color to
+all buttons*/
 function returnToDefault(){
 
     getElement('userRock').style.backgroundColor = "#950740";
@@ -69,6 +73,8 @@ function returnToDefault(){
 
 }
 
+/* This function simulates a game, keeps track of rounds won, and
+ends the game when a player reaches 5 wins */
 function game(userInput) {
 
     returnToDefault();
@@ -105,6 +111,7 @@ function game(userInput) {
 
 }
 
+/* Checks if the user or computer has reached 5 wins */
 function isOver(){
     if((playerWins == 5) || (computerwins == 5)){
         return(true);
@@ -114,6 +121,7 @@ function isOver(){
     }
 }
 
+/* Shorthand to direct to an element */
 function getElement(id){
     return document.getElementById(id);
  }
