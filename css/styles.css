@@ -45,6 +45,7 @@ body {
 
 .bottomnavbar a {
     text-decoration: none;
+    text-decoration: underline;
     font-size: 28px;
     color: var(--primary-red);
 }
@@ -104,8 +105,8 @@ button {
     background-color: var(--primary-red);
     color: var(--primary-light);
     font-size: larger;
-    width: 30vh;
-    height: 16vh;
+    width: 30vw;
+    height: 16vw;
 
     border-radius: 12px;
     font-size: 25px;
@@ -139,9 +140,11 @@ button {
         flex-direction: column;
     }
 
-    .button {
-        width: 20vw;
+    button {
+        width: 40vw;
         height: 15vw;
+
+        font-size: large;
     }
 
   }
