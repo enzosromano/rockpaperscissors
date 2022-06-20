@@ -97,7 +97,7 @@ function game(userInput) {
         }
 
     document.getElementById('scoreboard').innerText = 
-        ("You: " + playerWins + " | Computer: " + computerwins);
+        ("You: " + playerWins + " | Opp: " + computerwins);
 
     if(isOver()){
 
