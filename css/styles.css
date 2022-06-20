@@ -116,6 +116,10 @@ button {
     align-items: center;
 }
 
+.computerSide button {
+    opacity: 50%;
+}
+
 .outputArea {
     background-color: #1A1A1D;
     display: flex;

@@ -15,12 +15,15 @@ function determineWinner(playerSelection, computerSelection){
     switch(computerSelection) {
         case 0:
             document.getElementById('compRock').style.backgroundColor = "black";
+            document.getElementById('compRock').innerText = "Rock";
             break;
         case 1:
             document.getElementById('compPaper').style.backgroundColor = "black";
+            document.getElementById('compPaper').innerText = "Paper";
             break;
         case 2:
             document.getElementById('compScissors').style.backgroundColor = "black";
+            document.getElementById('compScissors').innerText = "Scissors";
             break;
     }
 
@@ -38,7 +41,19 @@ function determineWinner(playerSelection, computerSelection){
     }
 }
 
+function returnToDefault(){
+
+    document.getElementById('compRock').style.backgroundColor = "#950740";
+    document.getElementById('compRock').innerText = "???";
+    document.getElementById('compPaper').style.backgroundColor = "#950740";
+    document.getElementById('compPaper').innerText = "???";
+    document.getElementById('compScissors').style.backgroundColor = "#950740";
+    document.getElementById('compScissors').innerText = "???";
+}
+
 function game(userInput) {
+
+    returnToDefault();
 
     let winner = determineWinner(userInput, computerPlay());
 
