@@ -31,29 +31,29 @@ function setButtonStates(playerSelection, computerSelection) {
 
     switch(computerSelection) {
         case 0:
-            getElement('compRock').style.backgroundColor = "#6F2232";
-            getElement('compRock').innerText = "Rock";
+            getElement('computerOutput').innerText = "R";
             break;
         case 1:
-            getElement('compPaper').style.backgroundColor = "#6F2232";
-            getElement('compPaper').innerText = "Paper";
+            getElement('computerOutput').innerText = "P";
             break;
         case 2:
-            getElement('compScissors').style.backgroundColor = "#6F2232";
-            getElement('compScissors').innerText = "Scissors";
+            getElement('computerOutput').innerText = "S";
             break;
     }
 
     switch(playerSelection) {
         case 0:
+            getElement('userOutput').innerText = "R";
             getElement('userPaper').style.backgroundColor = "#5b5f68";
             getElement('userScissors').style.backgroundColor = "#5b5f68";
             break;
         case 1:
+            getElement('userOutput').innerText = "P";
             getElement('userRock').style.backgroundColor = "#5b5f68";
             getElement('userScissors').style.backgroundColor = "#5b5f68";
             break;
         case 2:
+            getElement('userOutput').innerText = "S";
             getElement('userRock').style.backgroundColor = "#5b5f68";
             getElement('userPaper').style.backgroundColor = "#5b5f68";
             break;
@@ -62,13 +62,6 @@ function setButtonStates(playerSelection, computerSelection) {
 }
 
 function returnToDefault(){
-
-    getElement('compRock').style.backgroundColor = "#5b5f68";
-    getElement('compRock').innerText = "???";
-    getElement('compPaper').style.backgroundColor = "#5b5f68";
-    getElement('compPaper').innerText = "???";
-    getElement('compScissors').style.backgroundColor = "#5b5f68";
-    getElement('compScissors').innerText = "???";
 
     getElement('userRock').style.backgroundColor = "#950740";
     getElement('userPaper').style.backgroundColor = "#950740";

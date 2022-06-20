@@ -30,20 +30,24 @@
             <p id="scoreboard">You: 0 | Opp: 0</p>
         </div>
 
-        
 
-        <div class="selectionInterface">
+        <div class="mainInterface">
 
-            <div class="userSide">
+            <div class="results">
+                <div class="userResults">
+                    <p>User:</p>
+                    <h1 id="userOutput">??</h1>
+                </div>
+                <div class="computerResults">
+                    <p>Comp:</p>
+                    <h1 id="computerOutput">??</h1>
+                </div>
+            </div>
+
+            <div class="choices">
                 <button id="userRock" onclick="game(0)">Rock</button>
                 <button id="userPaper" onclick="game(1)">Paper</button>
                 <button id="userScissors" onclick="game(2)">Scissors</button>
-            </div>
-
-            <div class="computerSide">
-                <button id="compRock">???</button>
-                <button id="compPaper">???</button>
-                <button id="compScissors">???</button>
             </div>
 
         </div>

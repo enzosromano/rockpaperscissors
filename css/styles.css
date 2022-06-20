@@ -66,6 +66,51 @@ body {
 
   }
 
+/* New Interface */
+
+.mainInterface {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.results {
+    display: flex;
+    color: var(--primary-light);
+    gap: 10vw;
+}
+
+.userResults, .computerResults {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5vh;
+}
+
+@media only screen and (max-width: 850px) {
+    
+    .userResults, .computerResults {
+        font-size: 5vw;
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .choices button {
+        width: 50vw;
+    }
+
+  }
+
+
 /* Main Body */
 
 .mainbody {
