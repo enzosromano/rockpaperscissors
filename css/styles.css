@@ -105,8 +105,8 @@ button {
     background-color: var(--primary-red);
     color: var(--primary-light);
     font-size: larger;
-    width: 30vw;
-    height: 16vw;
+    width: 30vh;
+    height: 16vh;
 
     border-radius: 12px;
     font-size: 25px;
